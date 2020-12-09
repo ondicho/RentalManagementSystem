@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#801313">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
 
     <ImageView
         android:id="@+id/loginImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#801919"
         android:scaleType="centerCrop"
         android:src="@drawable/apartment1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp" />
+        />
 
     <TextView
         android:id="@+id/loginTextView"
@@ -24,17 +19,11 @@
         android:textColor="@color/someShadeOfblue"
         android:textSize="40sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="76dp" />
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="70dp"
+        />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loginTextView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="324dp">
+
 
         <EditText
             android:id="@+id/emailEditText"
@@ -42,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:layout_marginBottom="10dp"
+            android:layout_below="@+id/loginTextView"
             android:hint="Email"
             android:inputType="text"
             android:nextFocusDown="@+id/passwordEditText"
@@ -74,26 +64,23 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="45dp"
             android:background="@color/someShadeOfblue"
-            android:hapticFeedbackEnabled="false"
             android:padding="10dp"
             android:text="Login"
             android:textColor="@color/buttonBlue" />
-
-    </RelativeLayout>
 
     <TextView
         android:id="@+id/signUpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
-        android:text="Sign Up Here"
+        android:layout_below="@id/loginButton"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:textColor="@color/someShadeOfblue"
-        android:textSize="25sp"
+        android:text="Sign up here"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="663dp" />
+        android:textSize="25sp"
+        android:layout_centerInParent="true"/>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
