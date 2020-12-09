@@ -31,16 +31,16 @@
         tools:layout_editor_absoluteY="94dp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/launcherTextView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/launcherTextView"
-        android:fontFamily="@font/annie_use_your_telescope"
-        android:text="owning a home made easier"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="596dp"
-        tools:ignore="MissingConstraints" />
+<!--    <TextView-->
+<!--        android:id="@+id/launcherTextView2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/launcherTextView"-->
+<!--        android:fontFamily="@font/annie_use_your_telescope"-->
+<!--        android:text="owning a home made easier"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="64dp"-->
+<!--        tools:layout_editor_absoluteY="596dp" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
