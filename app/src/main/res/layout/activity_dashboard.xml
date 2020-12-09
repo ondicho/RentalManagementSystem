@@ -63,10 +63,10 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/confirmPaymentTextView"
+                    android:id="@+id/tenantInformationTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/confirmPaymentImageView"
+                    android:layout_below="@id/tenantInformationImageView"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/annie_use_your_telescope"
@@ -74,7 +74,7 @@
                     android:textSize="24sp" />
 
                 <ImageView
-                    android:id="@+id/confirmPaymentImageView"
+                    android:id="@+id/tenantInformationImageView"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_centerHorizontal="true"
@@ -94,7 +94,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/aboutUsTextView"
+                    android:id="@+id/rentStatusTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rentStatusImageView"
@@ -171,7 +171,7 @@
                     android:id="@+id/aboutUsTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/rentStatusImageView"
+                    android:layout_below="@id/aboutUsImagemageView"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/annie_use_your_telescope"
@@ -179,7 +179,7 @@
                     android:textSize="24sp" />
 
                 <ImageView
-                    android:id="@+id/rentStatusImageView"
+                    android:id="@+id/aboutUsImagemageView"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_centerHorizontal="true"

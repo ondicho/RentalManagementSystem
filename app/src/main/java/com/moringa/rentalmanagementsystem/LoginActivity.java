@@ -27,12 +27,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         ButterKnife.bind(this);
 
         mSignUpTextView.setOnClickListener(this);
+        mLoginButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if(v==mSignUpTextView){
             Intent intent=new Intent(LoginActivity.this,SignUpActivity.class);
+            startActivity(intent);
+        }
+        if(v==mLoginButton){
+            Intent intent=new Intent(LoginActivity.this,DashboardActivity.class);
             startActivity(intent);
         }
     }
