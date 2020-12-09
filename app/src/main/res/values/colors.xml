@@ -19,5 +19,6 @@
     <color name="colorDivider">#B6B6B6</color>
     <color name="light_blue">#AED6F1 </color>
     <color name="someShadeOfblue">#566573</color>
+    <color name="buttonBlue">#212F3D</color>
 
 </resources>
