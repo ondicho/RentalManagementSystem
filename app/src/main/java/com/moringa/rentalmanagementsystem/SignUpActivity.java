@@ -29,6 +29,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_sign_up);
         ButterKnife.bind(this);
+
+        mLoginTextView.setOnClickListener(this);
     }
 
     @Override
