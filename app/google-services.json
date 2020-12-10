@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "514923732254",
+    "project_id": "rentalmanagementsystem-783c3",
+    "storage_bucket": "rentalmanagementsystem-783c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514923732254:android:7b1093e2babffa46427d0f",
+        "android_client_info": {
+          "package_name": "com.moringa.rentalmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514923732254-3mru95c7dlr7d6i9aj2nhqodtcit8ivi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringa.rentalmanagementsystem",
+            "certificate_hash": "7a2d442edc031465f6e0066702ed044353f177f9"
+          }
+        },
+        {
+          "client_id": "514923732254-a5tvgr2s9liivnkmqmgivr7dijag1m9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5C42FQT2kzM9GC_wF_ASJr3-S39QYzLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514923732254-a5tvgr2s9liivnkmqmgivr7dijag1m9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
