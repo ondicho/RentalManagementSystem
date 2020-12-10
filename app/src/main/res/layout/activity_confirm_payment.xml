@@ -4,11 +4,132 @@
     android:background="@color/lightgrey">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/confirmPaymentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Under Development"
-        android:layout_centerInParent="true"
-        android:textSize="30sp"/>
+        android:text="Confirm Payment"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:padding="20dp"
+        android:fontFamily="@font/annie_use_your_telescope"
+        />
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirmPaymentTextView"
+        >
+
+    <TextView
+        android:id="@+id/apartmentNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apartment Number:"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:layout_below="@id/confirmPaymentTextView"
+        />
+
+
+    <EditText
+        android:id="@+id/apartmentNumberEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/apartmentNumberEditText"
+        android:layout_marginLeft="10dp"
+        android:hint="A07"
+        android:textColorHint="@color/someShadeOfblue" />
+        />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayout1">
+        <TextView
+            android:id="@+id/monthTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apartmentNumberTextView"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:text="Month:"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/monthEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/monthTextView"
+            android:layout_marginLeft="140dp"
+            android:hint="January"
+            android:textColorHint="@color/someShadeOfblue"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayout2">
+        <TextView
+            android:id="@+id/transactionCodeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:padding="10dp"
+            android:text="Transaction Code:"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/transactionCodeEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/transactionCodeTextView"
+            android:layout_marginLeft="30dp"
+            android:hint="OL77B08YFJ"
+            android:textColorHint="@color/someShadeOfblue"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayout3">
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:padding="10dp"
+            android:text="Amount:"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/amountEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/amountTextView"
+            android:layout_marginLeft="120dp"
+            android:hint="10000"
+            android:textColorHint="@color/someShadeOfblue"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirmPaymentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayout4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/someShadeOfblue"
+        android:text="Submit"
+        android:textColor="@color/buttonBlue"
+        android:textSize="30sp" />
+
 
 </RelativeLayout>
