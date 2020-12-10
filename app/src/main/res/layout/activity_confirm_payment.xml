@@ -53,6 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/apartmentNumberTextView"
             android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
             android:padding="10dp"
             android:text="Month:"
             android:textSize="30sp" />
