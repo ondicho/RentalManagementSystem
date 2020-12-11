@@ -42,11 +42,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @BindView(R.id.signUpButton) Button mSignUpButton;
     @BindView(R.id.loginTextView) TextView mLoginTextView;
 
-    final String name = mNameEditText.getText().toString().trim();
-    final String email = mEmailEditText.getText().toString().trim();
-    String apartmentNumber = mApartmentNumberEditText.toString().trim();
-    String password = mPasswordEditText.toString().trim();
-    String confirmPassword = mConfirmpasswordEditText.toString().trim();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +58,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void createNewUser() {
+
+        final String email = mEmailEditText.getText().toString().trim();
+        String password = mPasswordEditText.toString().trim();
+
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
 
@@ -116,6 +116,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
            createNewUser();
            RMS=FirebaseDatabase.getInstance();
            reference=RMS.getReference(Constants.FIREBASE_CHILD_USERS);
+            final String name = mNameEditText.getText().toString().trim();
+            final String email = mEmailEditText.getText().toString().trim();
+            String apartmentNumber = mApartmentNumberEditText.getText().toString().trim();
+
             User user=new User(name,email,apartmentNumber);
            reference.child(apartmentNumber).setValue(user);
         }
