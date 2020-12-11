@@ -63,7 +63,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/tenantInformationTextView"
+                    android:id="@+id/tenantNameTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tenantInformationImageView"
@@ -137,7 +137,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/confirmPaymentTextView"
+                    android:id="@+id/emailTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/confirmPaymentImageView"
@@ -168,7 +168,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/aboutUsTextView"
+                    android:id="@+id/apartmentNumTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/aboutUsImagemageView"

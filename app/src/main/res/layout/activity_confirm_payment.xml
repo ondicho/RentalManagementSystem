@@ -4,7 +4,7 @@
     android:background="@color/lightgrey">
 
     <TextView
-        android:id="@+id/confirmPaymentTextView"
+        android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -17,14 +17,14 @@
         android:id="@+id/linearlayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/confirmPaymentTextView"
+        android:layout_below="@id/emailTextView"
         >
 
         <TextView
             android:id="@+id/apartmentNumberTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/confirmPaymentTextView"
+            android:layout_below="@id/emailTextView"
             android:fontFamily="@font/annie_use_your_telescope"
             android:padding="10dp"
             android:text="Apartment Number:"
