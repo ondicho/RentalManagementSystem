@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "514923732254",
+    "firebase_url": "https://rentalmanagementsystem-783c3-default-rtdb.firebaseio.com",
     "project_id": "rentalmanagementsystem-783c3",
     "storage_bucket": "rentalmanagementsystem-783c3.appspot.com"
   },
@@ -14,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "514923732254-3mru95c7dlr7d6i9aj2nhqodtcit8ivi.apps.googleusercontent.com",
+          "client_id": "514923732254-hhfkbqloutlgqomiprjn6khff407hlig.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.moringa.rentalmanagementsystem",

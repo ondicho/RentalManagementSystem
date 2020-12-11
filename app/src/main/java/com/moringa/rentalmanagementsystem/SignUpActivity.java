@@ -18,7 +18,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import Constants.Constants;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -27,8 +30,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     public static final String TAG=SignUpActivity.class.getSimpleName();
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-
-
+    FirebaseDatabase RMS;
+    DatabaseReference reference;
 
     @BindView(R.id.emailEditText) EditText mEmailEditText;
     @BindView(R.id.nameEditText) EditText mNameEditText;
@@ -110,6 +113,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         }
         if(v==mSignUpButton){
            createNewUser();
+           RMS=FirebaseDatabase.getInstance();
+           reference=RMS.getReference(Constants.FIREBASE_CHILD_USERS);
+
+           reference.setValue("");
         }
     }
 }
