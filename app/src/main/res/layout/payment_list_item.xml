@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/paymentImageView"
+        android:src="@drawable/apartment5"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tenantNameTextView"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:text="Tenant Name"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/annie_use_your_telescope"/>
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apartment Number"
+            android:id="@+id/apartmentNumberTextView"
+            android:layout_below="@+id/tenantNameTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="italic"
+            android:textColor="@color/someShadeOfblue"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apartment Number"
+            android:id="@+id/monthTextView"
+            android:layout_below="@+id/tenantNameTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="italic"
+            android:textColor="@color/someShadeOfblue"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="30sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apartment Number"
+                android:id="@+id/transactionCodeTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="italic"
+                android:textColor="@color/someShadeOfblue"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:id="@+id/ratingTextView"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textSize="30sp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
