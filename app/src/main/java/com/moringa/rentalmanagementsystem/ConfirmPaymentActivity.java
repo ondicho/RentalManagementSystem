@@ -54,7 +54,7 @@ public class ConfirmPaymentActivity extends AppCompatActivity implements View.On
             final Integer amount= Integer.valueOf(mAmountEditText.getText().toString());
 
             Payment payment=new Payment(apartmentNumber,month,transactionCode,amount);
-            reference.child(apartmentNumber).setValue(payment);
+            reference.child(apartmentNumber).push().setValue(payment);
             Toast.makeText(ConfirmPaymentActivity.this, "Saved", Toast.LENGTH_SHORT).show();
         }
     }
