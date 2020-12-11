@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -15,11 +16,12 @@ import Constants.Constants;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import models.Payment;
+import models.User;
 
 public class ConfirmPaymentActivity extends AppCompatActivity implements View.OnClickListener {
 
-    FirebaseDatabase database=FirebaseDatabase.getInstance();
-    DatabaseReference ref = database.getReference();
+    FirebaseDatabase RMS;
+    DatabaseReference reference;
     private ValueEventListener mPaymentsReferenceListener;
     private DatabaseReference mPaymentsReference;
 
@@ -29,23 +31,12 @@ public class ConfirmPaymentActivity extends AppCompatActivity implements View.On
     @BindView(R.id.amountEditText) EditText mAmountEditText;
     @BindView(R.id.confirmPaymentButton) Button mConfirmPaymentButton;
 
-    private Payment mPayments;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     mPaymentsReference=FirebaseDatabase .getInstance().getReference().child(Constants.FIREBASE_CHILD_SEARCHED_PAYMENTS);
-//    mPaymentsReferenceListener=mPaymentsReference.addValueEventListener(new ValueEventListener() {
-//        @Override
-//        public void onDataChange(@NonNull DataSnapshot snapshot) {
-//
-//        }
-//
-//        @Override
-//        public void onCancelled(@NonNull DatabaseError error) {
-//
-//        }
-//    });
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_payment);
         ButterKnife.bind(this);
@@ -55,10 +46,16 @@ public class ConfirmPaymentActivity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         if(v==mConfirmPaymentButton){
-            DatabaseReference paymentsRef= FirebaseDatabase.getInstance()
-                    .getReference(Constants.FIREBASE_CHILD_PAYMENTS);
-            paymentsRef.push().setValue((mPayments));
-//            Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+            RMS=FirebaseDatabase.getInstance();
+            reference=RMS.getReference(Constants.FIREBASE_CHILD_PAYMENTS);
+            final String apartmentNumber = mApartmentNumberEditText.getText().toString().trim();
+            final String month = mMonthEditText.getText().toString().trim();
+            final String transactionCode = mTransactionCodeEditText.getText().toString().trim();
+            final Integer amount= Integer.valueOf(mAmountEditText.getText().toString());
+
+            Payment payment=new Payment(apartmentNumber,month,transactionCode,amount);
+            reference.child(apartmentNumber).setValue(payment);
+            Toast.makeText(ConfirmPaymentActivity.this, "Saved", Toast.LENGTH_SHORT).show();
         }
     }
 }

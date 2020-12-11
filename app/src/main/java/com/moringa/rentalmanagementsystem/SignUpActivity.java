@@ -118,7 +118,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
            reference=RMS.getReference(Constants.FIREBASE_CHILD_USERS);
             final String name = mNameEditText.getText().toString().trim();
             final String email = mEmailEditText.getText().toString().trim();
-            String apartmentNumber = mApartmentNumberEditText.getText().toString().trim();
+            final String apartmentNumber = mApartmentNumberEditText.getText().toString().trim();
 
             User user=new User(name,email,apartmentNumber);
            reference.child(apartmentNumber).setValue(user);
