@@ -8,6 +8,7 @@ public class User {
     private String email;
     private String apartmentNumber;
 
+
     public User(){}
 
     public User(String tenantName,String email,String apartmentNumber){
