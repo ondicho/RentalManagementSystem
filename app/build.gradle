@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.moringa.restaurantmanagementsystem"
+        applicationId "com.moringa.rentalmanagementsystem"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -66,6 +66,7 @@ dependencies {
     //firebase
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
     implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.firebaseui:firebase-ui-database:3.3.1'
     //parceler
     implementation 'org.parceler:parceler-api:1.1.13'
     annotationProcessor 'org.parceler:parceler:1.1.13'
@@ -87,3 +88,4 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
 }
+apply plugin: 'com.google.gms.google-services'
