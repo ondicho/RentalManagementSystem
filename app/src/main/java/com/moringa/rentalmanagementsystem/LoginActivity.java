@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     public static final String TAG = LoginActivity.class.getSimpleName();
 
-    @BindView(R.id.loginImageView) ImageView mLoginImageView;
+//    @BindView(R.id.loginImageView) ImageView mLoginImageView;
     @BindView(R.id.emailEditText) EditText mEmailEditText;
     @BindView(R.id.passwordEditText) EditText mPasswordEditText;
     @BindView(R.id.loginButton) Button mLoginButton;
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.apartment1);
         Bitmap blurredBitmap = BlurBuilder.blur( this, originalBitmap );
-        mLoginImageView.setBackground(new BitmapDrawable(getResources(), blurredBitmap));
+//        mLoginImageView.setBackground(new BitmapDrawable(getResources(), blurredBitmap));
 
         mAuth=FirebaseAuth.getInstance();
         mAuthListener=new FirebaseAuth.AuthStateListener() {
