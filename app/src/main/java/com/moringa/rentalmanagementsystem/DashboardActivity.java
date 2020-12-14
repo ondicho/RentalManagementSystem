@@ -1,11 +1,14 @@
 package com.moringa.rentalmanagementsystem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -20,7 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DashboardActivity extends AppCompatActivity implements View.OnClickListener{
+public class DashboardActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     @BindView(R.id.tenantInformationImageView) ImageView tenantImageView;
     @BindView(R.id.rentStatusImageView) ImageView statusImageView;
@@ -41,10 +44,34 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         paymentImageView.setOnClickListener(this);
         aboutUsImageView.setOnClickListener(this);
 
+
+
 //        setSupportActionBar(toolbar);
+        navigationView.bringToFront();
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id=item.getItemId();
+                if(id==R.id.action_logout){
+                    logout();
+                }
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
+    }
+    @Override
+    public void onBackPressed(){
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+        drawerLayout.closeDrawer(GravityCompat.START);}
+        else{
+        super.onBackPressed();
+        }
     }
 
     @Override
@@ -65,6 +92,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             Intent intent=new Intent(DashboardActivity.this,AboutUsActivity.class);
             startActivity(intent);
         }
+
     }
 
 //    @Override
@@ -91,5 +119,10 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return true;
     }
 }
