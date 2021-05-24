@@ -17,4 +17,11 @@
         android:visible="true"
         app:showAsAction="never" />
     </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/tenancy_agreement"
+            android:title="Tenancy Agreement"
+            android:visible="true"
+            app:showAsAction="never" />
+    </group>
 </menu>
