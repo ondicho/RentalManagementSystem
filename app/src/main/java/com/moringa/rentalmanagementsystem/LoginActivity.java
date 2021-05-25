@@ -4,12 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,11 +25,13 @@ import com.google.firebase.auth.FirebaseUser;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import blur.BlurBuilder;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     public static final String TAG = LoginActivity.class.getSimpleName();
 
+//    @BindView(R.id.loginImageView) ImageView mLoginImageView;
     @BindView(R.id.emailEditText) EditText mEmailEditText;
     @BindView(R.id.passwordEditText) EditText mPasswordEditText;
     @BindView(R.id.loginButton) Button mLoginButton;
@@ -40,6 +46,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        //blur background
+
+        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.apartment1);
+        Bitmap blurredBitmap = BlurBuilder.blur( this, originalBitmap );
+//        mLoginImageView.setBackground(new BitmapDrawable(getResources(), blurredBitmap));
 
         mAuth=FirebaseAuth.getInstance();
         mAuthListener=new FirebaseAuth.AuthStateListener() {
