@@ -29,6 +29,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     @BindView(R.id.rentStatusImageView) ImageView statusImageView;
     @BindView(R.id.confirmPaymentImageView) ImageView paymentImageView;
     @BindView(R.id.aboutUsImagemageView) ImageView aboutUsImageView;
+    @BindView(R.id.mpesaImagemageView) ImageView mpesaImageView;
     @BindView(R.id.drawer_layout) DrawerLayout drawerLayout;
     @BindView(R.id.navigation_view) NavigationView navigationView;
     @BindView(R.id.toolbar2) Toolbar toolbar;
@@ -43,6 +44,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         statusImageView.setOnClickListener(this);
         paymentImageView.setOnClickListener(this);
         aboutUsImageView.setOnClickListener(this);
+        mpesaImageView.setOnClickListener(this);
 
 
 
@@ -92,7 +94,10 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             Intent intent=new Intent(DashboardActivity.this,AboutUsActivity.class);
             startActivity(intent);
         }
-
+        if(v==mpesaImageView){
+            Intent intent=new Intent(DashboardActivity.this,Lipa_na_mpesa.class);
+            startActivity(intent);
+        }
     }
 
 //    @Override

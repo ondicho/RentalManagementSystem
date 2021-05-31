@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentalManagementSystem">
-        <activity android:name=".SavedPaymentActivity"></activity>
+        <activity android:name=".Lipa_na_mpesa"></activity>
+        <activity android:name=".SavedPaymentActivity" />
         <activity android:name=".PaymentDetailActivity" />
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".ConfirmPaymentActivity" />
