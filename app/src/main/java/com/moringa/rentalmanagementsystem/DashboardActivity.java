@@ -8,9 +8,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -95,7 +92,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             startActivity(intent);
         }
         if(v==mpesaImageView){
-            Intent intent=new Intent(DashboardActivity.this,Lipa_na_mpesa.class);
+            Intent intent=new Intent(DashboardActivity.this, Lipa_na_mpesa.class);
             startActivity(intent);
         }
     }
