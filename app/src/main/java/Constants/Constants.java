@@ -1,6 +1,10 @@
 package Constants;
 
 public class Constants {
+
+    public static final String DARAJA_CONSUMER_KEY="6KSeCUybpCKmTi6s84W56PvBAA35I7Al"
+    public static final String DARAJA_CONSUMER_SECRET="0M4KR4ODr0w52Iv7"
+
     public static final String FIREBASE_CHILD_SEARCHED_PAYMENTS= "payments";
     public static final  String FIREBASE_CHILD_PAYMENTS="payments";
     public static final String FIREBASE_CHILD_USERS="users";
