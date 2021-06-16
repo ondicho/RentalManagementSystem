@@ -1,6 +1,6 @@
 package payment.Utils;
 
-public enum Mode {
+public enum Env {
     SANDBOX,
     PRODUCTION
 }

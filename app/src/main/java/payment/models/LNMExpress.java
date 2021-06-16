@@ -1,13 +1,14 @@
 package payment.models;
 
-import com.androidstudy.daraja.util.TransactionType;
+
+import payment.Utils.TransactionType;
 
 public class LNMExpress {
     private String BusinessShortCode;
     private String PassKey;
     private String Password;
     private String Timestamp;
-    private TransactionType Type;
+    private payment.Utils.TransactionType Type;
     private String Amount;
     private String TransactionType;
     private String PartyA;

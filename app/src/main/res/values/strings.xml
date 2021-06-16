@@ -4,5 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="on_failure">MPESAExpress Failed</string>
+    <string name="authentication_failed">Authentication Failed</string>
+    <string name="not_authenticated">Not Authenticated</string>
 </resources>
