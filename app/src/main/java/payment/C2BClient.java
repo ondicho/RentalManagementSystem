@@ -18,7 +18,7 @@ import static Constants.Constants.MPESA_C2B_SIMULATE_URL;
 
 public class C2BClient {
     private static Retrofit retrofit = null;
-
+//implement get amount route
     public static C2BApi getAmount(){
         if(retrofit==null){
             OkHttpClient okHttpClient=new OkHttpClient.Builder()
@@ -40,6 +40,8 @@ public class C2BClient {
         }
         return  retrofit.create(C2BApi.class);
     }
+    //implement post amount for mpesa
+
 //    private static  C2BApi C2BApi=null;
 //    private static STKPush STKPush=null;
 //

@@ -1,0 +1,13 @@
+package payment.network;
+
+import payment.models.LNMExpress;
+import payment.models.LNMResult;
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
+
+public interface LNMAPI {
+    @POST("mpesa/stkpush/v1/processrequest")
+    Call<LNMResult> getLNMPesa(@Body LNMExpress lnmExpress);
+
+}

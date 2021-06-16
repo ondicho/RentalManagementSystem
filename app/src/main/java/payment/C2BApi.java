@@ -1,5 +1,7 @@
 package payment;
 
+import payment.models.AccessToken;
+import payment.models.STKPush;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -18,6 +20,6 @@ public interface C2BApi {
 
 
     @POST("mpesa/stkpush/v1/processrequest")
-    Call<STKPush> getMPesa(@Body STKPush STKPush);
+    Call<STKPush> postMPesa(@Body STKPush STKPush);
 
 }
